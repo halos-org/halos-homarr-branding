@@ -1,0 +1,23 @@
+# Build artifacts
+*.deb
+*.buildinfo
+*.changes
+*.build
+
+# Debian build directories
+debian/.debhelper/
+debian/homarr-branding-halos/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+debian/*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	# Nothing to build
+
+override_dh_auto_install:
+	# Install config file
+	install -D -m 644 etc/homarr-branding-halos/branding.toml \
+		debian/homarr-branding-halos/etc/homarr-branding-halos/branding.toml
+	# Install static assets
+	install -d debian/homarr-branding-halos/usr/share/homarr-branding-halos
+	if [ -d usr/share/homarr-branding-halos ]; then \
+		cp -r usr/share/homarr-branding-halos/* \
+			debian/homarr-branding-halos/usr/share/homarr-branding-halos/ 2>/dev/null || true; \
+	fi

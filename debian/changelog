@@ -1,0 +1,9 @@
+homarr-branding-halos (0.1.0-1) unstable; urgency=medium
+
+  * Initial release
+  * HaLOS branding configuration for Homarr dashboard
+  * Default theme colors and dark mode
+  * Default admin credentials
+  * Pre-configured board layout with Cockpit tile
+
+ -- Matti Airas <matti.airas@hatlabs.fi>  Tue, 10 Dec 2025 21:00:00 +0200

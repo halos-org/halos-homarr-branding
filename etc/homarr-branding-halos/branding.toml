@@ -1,0 +1,72 @@
+# HaLOS Branding Configuration for Homarr Dashboard
+#
+# This file is read by homarr-container-adapter during first-boot setup
+# to configure the Homarr dashboard with HaLOS branding and defaults.
+#
+# Location: /etc/homarr-branding-halos/branding.toml
+
+[identity]
+# Product name displayed in dashboard
+product_name = "HaLOS"
+
+# Logo file path (served by adapter or external URL)
+logo_path = "/usr/share/homarr-branding-halos/logo.svg"
+
+# Favicon path
+favicon_path = "/usr/share/homarr-branding-halos/favicon.ico"
+
+[theme]
+# Default color scheme: "dark" or "light"
+# Dark mode is preferred for marine/industrial environments
+default_color_scheme = "dark"
+
+# Primary color (HaLOS brand blue)
+primary_color = "#1a73e8"
+
+# Secondary color (accent)
+secondary_color = "#4285f4"
+
+# Item border radius: "xs", "sm", "md", "lg", "xl"
+item_radius = "lg"
+
+# Background opacity (0-100)
+opacity = 100
+
+[credentials]
+# Default admin credentials for first-boot setup
+# IMPORTANT: Users should change password after first login
+admin_username = "admin"
+admin_password = "HalosAdmin123@"
+
+[board]
+# Default board configuration
+name = "halos-dashboard"
+display_name = "HaLOS Dashboard"
+column_count = 10
+is_public = true
+
+[board.cockpit]
+# Cockpit tile - always present on default board
+enabled = true
+name = "Cockpit"
+description = "System management console"
+href = "https://halos.local:9090"
+icon_url = "https://cockpit-project.org/images/site/cockpit-logo.svg"
+width = 2
+height = 2
+x_offset = 0
+y_offset = 0
+
+[settings]
+# Server settings for first-boot initialization
+[settings.analytics]
+enable_general = false
+enable_widget_data = false
+enable_integration_data = false
+enable_user_data = false
+
+[settings.crawling]
+no_index = true
+no_follow = true
+no_translate = true
+no_sitelinks_search_box = true
