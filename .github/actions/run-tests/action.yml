@@ -1,0 +1,9 @@
+name: 'Run Tests'
+description: 'Run tests for homarr-branding-halos (no-op for static package)'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: No tests required
+      run: echo "No tests for static branding package"
+      shell: bash

@@ -1,0 +1,18 @@
+name: 'Build Debian Package'
+description: 'Build homarr-branding-halos package'
+runs:
+  using: 'composite'
+  steps:
+    - name: Install build dependencies
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y dpkg-dev debhelper build-essential
+
+    - name: Build package
+      shell: bash
+      run: |
+        dpkg-buildpackage -b -uc -us
+        mv ../*.deb ./ 2>/dev/null || true
+        echo "Built packages:"
+        ls -lh *.deb
