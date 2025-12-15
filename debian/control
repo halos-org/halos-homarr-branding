@@ -10,7 +10,7 @@ Rules-Requires-Root: no
 Package: halos-homarr-branding
 Architecture: all
 Depends: ${misc:Depends},
-         homarr-container
+         halos-homarr-container
 Description: HaLOS branding and default configuration for Homarr dashboard
  This package provides the Hat Labs "HaLOS" branding configuration for
  the Homarr dashboard, including default theme colors, admin credentials,
