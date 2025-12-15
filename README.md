@@ -12,7 +12,7 @@ This package provides:
 
 ## Installation
 
-The package is installed as part of HaLOS images. It depends on `homarr-container`.
+The package is installed as part of HaLOS images. It depends on `halos-homarr-container`.
 
 ```bash
 apt install halos-homarr-branding
@@ -39,7 +39,7 @@ The main configuration file is installed at:
 
 ## How It Works
 
-1. `homarr-container` starts the Homarr dashboard
+1. `halos-homarr-container` starts the Homarr dashboard
 2. `homarr-container-adapter` detects first boot
 3. Adapter reads `/etc/halos-homarr-branding/branding.toml`
 4. Adapter completes Homarr onboarding via API:
@@ -70,7 +70,7 @@ The main configuration file is installed at:
 
 ## Related Packages
 
-- [homarr-container](../halos-core-containers/apps/homarr/) - Homarr dashboard container
+- [halos-homarr-container](../halos-core-containers/apps/homarr/) - Homarr dashboard container
 - [homarr-container-adapter](https://github.com/hatlabs/homarr-container-adapter) - First-boot setup and auto-discovery
 
 ## License

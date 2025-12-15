@@ -86,5 +86,5 @@ The `branding.toml` file contains:
 
 ## Related Packages
 
-- **homarr-container** - The Homarr dashboard container
+- **halos-homarr-container** - The Homarr dashboard container
 - **homarr-container-adapter** - Reads this config and applies it via Homarr API
