@@ -1,8 +1,8 @@
-# Homarr Branding HaLOS - Agentic Coding Guide
+# HaLOS Branding for Homarr - Agentic Coding Guide
 
 **LAST MODIFIED**: 2025-12-10
 
-**Document Purpose**: Guide for AI assistants working on homarr-branding-halos.
+**Document Purpose**: Guide for AI assistants working on halos-homarr-branding.
 
 ## For Agentic Coding: Use the HaLOS Workspace
 
@@ -11,7 +11,7 @@
 ```bash
 # Work from workspace
 cd halos-distro/
-# This repo is available as: homarr-branding-halos/
+# This repo is available as: halos-homarr-branding/
 ```
 
 **Development Workflows**: See `halos-distro/docs/` folder:
@@ -27,7 +27,7 @@ HaLOS branding and default configuration package for the Homarr dashboard. This 
 - **Static assets** - Logo, favicon for dashboard branding
 - **Default settings** - Theme colors, admin credentials, board layout
 
-The `homarr-container-adapter` reads `/etc/homarr-branding-halos/branding.toml` during first-boot setup to initialize Homarr with HaLOS branding.
+The `homarr-container-adapter` reads `/etc/halos-homarr-branding/branding.toml` during first-boot setup to initialize Homarr with HaLOS branding.
 
 ## Git Workflow Policy
 
@@ -52,7 +52,7 @@ The `homarr-container-adapter` reads `/etc/homarr-branding-halos/branding.toml` 
 ## Project Structure
 
 ```
-homarr-branding-halos/
+halos-homarr-branding/
 ├── docs/
 │   └── SPEC.md              # Technical specification
 ├── debian/                  # Debian package files
@@ -65,9 +65,9 @@ homarr-branding-halos/
 ├── docker/                  # Build container
 │   ├── Dockerfile.debtools
 │   └── docker-compose.debtools.yml
-├── etc/homarr-branding-halos/
+├── etc/halos-homarr-branding/
 │   └── branding.toml       # Branding configuration
-├── usr/share/homarr-branding-halos/
+├── usr/share/halos-homarr-branding/
 │   ├── logo.svg            # HaLOS logo
 │   ├── logo.png            # HaLOS logo (PNG)
 │   └── favicon.ico         # Favicon
