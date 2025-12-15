@@ -3,6 +3,7 @@ name: Main Branch CI/CD
 on:
   push:
     branches: [main]
+  workflow_dispatch:  # Allow manual triggering
 
 jobs:
   build-release:
