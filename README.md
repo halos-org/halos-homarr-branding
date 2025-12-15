@@ -15,7 +15,7 @@ This package provides:
 The package is installed as part of HaLOS images. It depends on `homarr-container`.
 
 ```bash
-apt install homarr-branding-halos
+apt install halos-homarr-branding
 ```
 
 ## Configuration
@@ -23,7 +23,7 @@ apt install homarr-branding-halos
 The main configuration file is installed at:
 
 ```
-/etc/homarr-branding-halos/branding.toml
+/etc/halos-homarr-branding/branding.toml
 ```
 
 ### Configuration Sections
@@ -41,7 +41,7 @@ The main configuration file is installed at:
 
 1. `homarr-container` starts the Homarr dashboard
 2. `homarr-container-adapter` detects first boot
-3. Adapter reads `/etc/homarr-branding-halos/branding.toml`
+3. Adapter reads `/etc/halos-homarr-branding/branding.toml`
 4. Adapter completes Homarr onboarding via API:
    - Creates admin user with configured credentials
    - Applies theme settings
@@ -63,10 +63,10 @@ The main configuration file is installed at:
 
 | Path | Description |
 |------|-------------|
-| `/etc/homarr-branding-halos/branding.toml` | Branding configuration |
-| `/usr/share/homarr-branding-halos/logo.svg` | HaLOS logo (SVG) |
-| `/usr/share/homarr-branding-halos/logo.png` | HaLOS logo (PNG) |
-| `/usr/share/homarr-branding-halos/favicon.ico` | Favicon |
+| `/etc/halos-homarr-branding/branding.toml` | Branding configuration |
+| `/usr/share/halos-homarr-branding/logo.svg` | HaLOS logo (SVG) |
+| `/usr/share/halos-homarr-branding/logo.png` | HaLOS logo (PNG) |
+| `/usr/share/halos-homarr-branding/favicon.ico` | Favicon |
 
 ## Related Packages
 

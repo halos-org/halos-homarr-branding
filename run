@@ -2,7 +2,7 @@
 #
 # usage: ./run command [argument ...]
 #
-# Commands for homarr-branding-halos development.
+# Commands for halos-homarr-branding development.
 #
 
 set -o nounset
@@ -41,7 +41,7 @@ function build-deb {
 
   # List generated packages
   echo "📦 Generated packages:"
-  ls -lh homarr-branding-halos*.deb 2>/dev/null || echo "⚠️  No .deb files found"
+  ls -lh halos-homarr-branding*.deb 2>/dev/null || echo "⚠️  No .deb files found"
   echo "✅ Package build complete"
 }
 

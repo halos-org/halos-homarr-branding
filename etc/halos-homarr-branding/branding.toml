@@ -3,17 +3,17 @@
 # This file is read by homarr-container-adapter during first-boot setup
 # to configure the Homarr dashboard with HaLOS branding and defaults.
 #
-# Location: /etc/homarr-branding-halos/branding.toml
+# Location: /etc/halos-homarr-branding/branding.toml
 
 [identity]
 # Product name displayed in dashboard
 product_name = "HaLOS"
 
 # Logo file path (served by adapter or external URL)
-logo_path = "/usr/share/homarr-branding-halos/logo.svg"
+logo_path = "/usr/share/halos-homarr-branding/logo.svg"
 
 # Favicon path
-favicon_path = "/usr/share/homarr-branding-halos/favicon.ico"
+favicon_path = "/usr/share/halos-homarr-branding/favicon.ico"
 
 [theme]
 # Default color scheme: "dark" or "light"

@@ -1,4 +1,4 @@
-Source: homarr-branding-halos
+Source: halos-homarr-branding
 Section: admin
 Priority: optional
 Maintainer: Matti Airas <matti.airas@hatlabs.fi>
@@ -7,7 +7,7 @@ Standards-Version: 4.6.2
 Homepage: https://github.com/hatlabs/halos-distro
 Rules-Requires-Root: no
 
-Package: homarr-branding-halos
+Package: halos-homarr-branding
 Architecture: all
 Depends: ${misc:Depends},
          homarr-container

@@ -8,7 +8,7 @@ jobs:
   build-release:
     uses: hatlabs/shared-workflows/.github/workflows/build-release.yml@main
     with:
-      package-name: homarr-branding-halos
+      package-name: halos-homarr-branding
       package-description: 'HaLOS branding for Homarr dashboard'
       apt-distro: trixie
       apt-component: main
