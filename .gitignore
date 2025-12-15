@@ -6,7 +6,7 @@
 
 # Debian build directories
 debian/.debhelper/
-debian/homarr-branding-halos/
+debian/halos-homarr-branding/
 debian/debhelper-build-stamp
 debian/files
 debian/*.substvars

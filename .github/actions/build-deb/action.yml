@@ -1,5 +1,5 @@
 name: 'Build Debian Package'
-description: 'Build homarr-branding-halos package'
+description: 'Build halos-homarr-branding package'
 runs:
   using: 'composite'
   steps:
