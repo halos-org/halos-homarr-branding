@@ -20,11 +20,11 @@ favicon_path = "/usr/share/halos-homarr-branding/favicon.ico"
 # Dark mode is preferred for marine/industrial environments
 default_color_scheme = "dark"
 
-# Primary color (HaLOS brand blue)
-primary_color = "#1a73e8"
+# Primary color (Hat Labs navy)
+primary_color = "#273f65"
 
-# Secondary color (accent)
-secondary_color = "#4285f4"
+# Secondary color (Hat Labs burgundy)
+secondary_color = "#6d131e"
 
 # Item border radius: "xs", "sm", "md", "lg", "xl"
 item_radius = "lg"
@@ -40,8 +40,8 @@ admin_password = "HalosAdmin123@"
 
 [board]
 # Default board configuration
-name = "halos-dashboard"
-display_name = "HaLOS Dashboard"
+name = "Halos"
+display_name = "Halos"
 column_count = 10
 is_public = true
 
