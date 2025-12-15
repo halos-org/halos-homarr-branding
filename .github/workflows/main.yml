@@ -1,0 +1,17 @@
+name: Main Branch CI/CD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-release:
+    uses: hatlabs/shared-workflows/.github/workflows/build-release.yml@main
+    with:
+      package-name: homarr-branding-halos
+      package-description: 'HaLOS branding for Homarr dashboard'
+      apt-distro: trixie
+      apt-component: main
+      skip-tests: true
+    secrets:
+      APT_REPO_PAT: ${{ secrets.APT_REPO_PAT }}
