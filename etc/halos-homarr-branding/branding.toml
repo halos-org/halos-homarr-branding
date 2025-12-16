@@ -7,12 +7,22 @@
 
 [identity]
 # Product name displayed in dashboard
-product_name = "HaLOS"
+product_name = "Halos"
 
-# Logo file path (served by adapter or external URL)
+# Browser tab title (shown in browser tab)
+page_title = "Halos"
+
+# Meta title for SEO (short descriptive title)
+meta_title = "Halos - Marine System Dashboard"
+
+# Logo file path (served via /branding/ URL prefix)
+logo_image_url = "/branding/logo.svg"
+
+# Favicon path (served via /branding/ URL prefix)
+favicon_image_url = "/branding/favicon.ico"
+
+# Legacy paths (for backwards compatibility)
 logo_path = "/usr/share/halos-homarr-branding/logo.svg"
-
-# Favicon path
 favicon_path = "/usr/share/halos-homarr-branding/favicon.ico"
 
 [theme]
@@ -20,11 +30,11 @@ favicon_path = "/usr/share/halos-homarr-branding/favicon.ico"
 # Dark mode is preferred for marine/industrial environments
 default_color_scheme = "dark"
 
-# Primary color (HaLOS brand blue)
-primary_color = "#1a73e8"
+# Primary color
+primary_color = "#273f65"
 
-# Secondary color (accent)
-secondary_color = "#4285f4"
+# Secondary color
+secondary_color = "#6d131e"
 
 # Item border radius: "xs", "sm", "md", "lg", "xl"
 item_radius = "lg"
@@ -40,8 +50,8 @@ admin_password = "HalosAdmin123@"
 
 [board]
 # Default board configuration
-name = "halos-dashboard"
-display_name = "HaLOS Dashboard"
+name = "Halos"
+display_name = "Halos"
 column_count = 10
 is_public = true
 
