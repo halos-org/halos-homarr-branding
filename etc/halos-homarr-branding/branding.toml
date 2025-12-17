@@ -52,20 +52,11 @@ admin_password = "HalosAdmin123@"
 # Default board configuration
 name = "Halos"
 display_name = "Halos"
-column_count = 10
+column_count = 12
 is_public = true
 
-[board.cockpit]
-# Cockpit tile - always present on default board
-enabled = true
-name = "Cockpit"
-description = "System management console"
-href = "https://halos.local:9090"
-icon_url = "https://cockpit-project.org/images/site/cockpit-logo.svg"
-width = 2
-height = 2
-x_offset = 0
-y_offset = 0
+# NOTE: Cockpit is now configured via /etc/halos/webapps.d/cockpit.toml
+# The [board.cockpit] section has been removed in favor of the unified registry.
 
 [settings]
 # Server settings for first-boot initialization
