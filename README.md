@@ -7,8 +7,8 @@ HaLOS branding and default configuration package for the Homarr dashboard.
 This package provides:
 
 - **branding.toml** - Configuration file read by `homarr-container-adapter`
-- **Static assets** - Logo, favicon for dashboard branding
-- **Default settings** - Theme colors, admin credentials, pre-configured board
+- **Static assets** - Logo, favicon, and background image for dashboard branding
+- **Default settings** - Theme colors, background, admin credentials, pre-configured board
 
 ## Installation
 
@@ -31,10 +31,9 @@ The main configuration file is installed at:
 | Section | Purpose |
 |---------|---------|
 | `[identity]` | Product name, logo paths |
-| `[theme]` | Color scheme (dark/light), primary/secondary colors |
+| `[theme]` | Color scheme, colors, background image, opacity, item radius |
 | `[credentials]` | Default admin username and password |
 | `[board]` | Default board name, layout, column count |
-| `[board.cockpit]` | Pre-configured Cockpit tile |
 | `[settings]` | Analytics and crawling preferences |
 
 ## How It Works
@@ -67,6 +66,7 @@ The main configuration file is installed at:
 | `/usr/share/halos-homarr-branding/logo.svg` | HaLOS logo (SVG) |
 | `/usr/share/halos-homarr-branding/logo.png` | HaLOS logo (PNG) |
 | `/usr/share/halos-homarr-branding/favicon.ico` | Favicon |
+| `/usr/share/halos-homarr-branding/background.jpg` | Dashboard background image |
 
 ## Related Packages
 

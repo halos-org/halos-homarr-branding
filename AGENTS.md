@@ -1,6 +1,6 @@
 # HaLOS Branding for Homarr - Agentic Coding Guide
 
-**LAST MODIFIED**: 2025-12-10
+**LAST MODIFIED**: 2025-12-17
 
 **Document Purpose**: Guide for AI assistants working on halos-homarr-branding.
 
@@ -70,7 +70,8 @@ halos-homarr-branding/
 ├── usr/share/halos-homarr-branding/
 │   ├── logo.svg            # HaLOS logo
 │   ├── logo.png            # HaLOS logo (PNG)
-│   └── favicon.ico         # Favicon
+│   ├── favicon.ico         # Favicon
+│   └── background.jpg      # Dashboard background image
 └── run                      # Build script
 ```
 
@@ -79,9 +80,9 @@ halos-homarr-branding/
 The `branding.toml` file contains:
 
 - **[identity]** - Product name, logo paths
-- **[theme]** - Color scheme, primary/secondary colors
+- **[theme]** - Color scheme, colors, background image, opacity, item radius
 - **[credentials]** - Default admin username/password
-- **[board]** - Default board name, layout, Cockpit tile
+- **[board]** - Default board name, layout, column count
 - **[settings]** - Analytics and crawling settings
 
 ## Related Packages
