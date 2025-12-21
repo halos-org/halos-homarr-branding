@@ -2,7 +2,9 @@ Source: halos-homarr-branding
 Section: admin
 Priority: optional
 Maintainer: Matti Airas <matti.airas@hatlabs.fi>
-Build-Depends: debhelper-compat (= 13)
+Build-Depends: debhelper-compat (= 13),
+               python3,
+               python3-bcrypt
 Standards-Version: 4.6.2
 Homepage: https://github.com/hatlabs/halos-distro
 Rules-Requires-Root: no

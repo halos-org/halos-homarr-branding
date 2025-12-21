@@ -4,6 +4,10 @@
 *.changes
 *.build
 
+# Generated at build time
+var/lib/halos-homarr-branding/db-seed.sqlite3
+etc/halos-homarr-branding/bootstrap-api-key
+
 # Debian build directories
 debian/.debhelper/
 debian/halos-homarr-branding/

@@ -4,12 +4,23 @@
 	dh $@
 
 override_dh_auto_build:
-	# Nothing to build
+	# Create output directories
+	mkdir -p var/lib/halos-homarr-branding
+	# Generate seed database with bootstrap API key
+	python3 tools/generate-seed-db.py \
+		--output-db var/lib/halos-homarr-branding/db-seed.sqlite3 \
+		--output-key etc/halos-homarr-branding/bootstrap-api-key
 
 override_dh_auto_install:
 	# Install config file
 	install -D -m 644 etc/halos-homarr-branding/branding.toml \
 		debian/halos-homarr-branding/etc/halos-homarr-branding/branding.toml
+	# Install bootstrap API key (readable only by root)
+	install -D -m 600 etc/halos-homarr-branding/bootstrap-api-key \
+		debian/halos-homarr-branding/etc/halos-homarr-branding/bootstrap-api-key
+	# Install seed database
+	install -D -m 644 var/lib/halos-homarr-branding/db-seed.sqlite3 \
+		debian/halos-homarr-branding/var/lib/halos-homarr-branding/db-seed.sqlite3
 	# Install static assets
 	install -d debian/halos-homarr-branding/usr/share/halos-homarr-branding
 	if [ -d usr/share/halos-homarr-branding ]; then \
