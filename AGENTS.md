@@ -65,8 +65,13 @@ halos-homarr-branding/
 ├── docker/                  # Build container
 │   ├── Dockerfile.debtools
 │   └── docker-compose.debtools.yml
+├── tools/
+│   └── generate-seed-db.py  # Generates seed database with bootstrap API key
 ├── etc/halos-homarr-branding/
-│   └── branding.toml       # Branding configuration
+│   ├── branding.toml        # Branding configuration
+│   └── bootstrap-api-key    # Bootstrap API key (generated at build time)
+├── var/lib/halos-homarr-branding/
+│   └── db-seed.sqlite3      # Pre-configured Homarr database (generated)
 ├── usr/share/halos-homarr-branding/
 │   ├── logo.svg            # HaLOS logo
 │   ├── logo.png            # HaLOS logo (PNG)
@@ -74,6 +79,16 @@ halos-homarr-branding/
 │   └── background.jpg      # Dashboard background image
 └── run                      # Build script
 ```
+
+## Seed Database
+
+The package includes a pre-configured Homarr SQLite database with:
+- Onboarding already complete (no wizard)
+- Service account user for API key ownership
+- Bootstrap API key (rotated on first boot by homarr-container-adapter)
+- Default server settings (analytics/crawling disabled)
+
+This enables `AUTH_PROVIDERS="oidc"` from the start, with no credentials login exposed.
 
 ## Configuration File
 
