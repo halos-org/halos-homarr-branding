@@ -71,16 +71,22 @@ function clean-debtools {
   echo "✅ Docker cleanup complete"
 }
 
-# Default deploy target
-readonly DEFAULT_DEPLOY_TARGET="halos.local"
 
 ################################################################################
 # Deploy Commands
 
 function deploy {
-  #@ Deploy .deb package to test server (default: halos.local)
+  #@ Deploy .deb package to test server
   #@ Category: Deploy
-  local target="${1:-$DEFAULT_DEPLOY_TARGET}"
+  local target="${1:-}"
+
+  if [[ -z "$target" ]]; then
+    echo "Usage: ./run deploy <target>"
+    echo ""
+    echo "Example: ./run deploy pi@myhost.local"
+    return 1
+  fi
+
   local deb_file
   deb_file=$(ls -t halos-homarr-branding*.deb 2>/dev/null | head -1)
 

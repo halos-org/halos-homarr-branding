@@ -15,7 +15,7 @@ Two users are created:
 1. halos-sync: Service account for API key ownership and programmatic access.
    The homarr-container-adapter uses this user's API key for sync operations.
 2. admin: Human administrator for OIDC login. When a user logs in via OIDC
-   with email 'admin@halos.local', Homarr links the OIDC account to this user.
+   with a matching email, Homarr links the OIDC account to this user.
 
 Both users have provider='oidc' to enable OIDC account linking.
 """
@@ -41,11 +41,14 @@ BOOTSTRAP_API_KEY_TOKEN = "halos-bootstrap-rotate-me-on-first-boot-abc123"
 
 # Service account for API key ownership and programmatic access
 HALOS_SYNC_USER_ID = "halos-sync"
-HALOS_SYNC_USER_EMAIL = "halos-sync@halos.local"
+# Service account email uses example.local (RFC 2606 reserved domain)
+HALOS_SYNC_USER_EMAIL = "halos-sync@example.local"
 
 # Human admin user for OIDC login
 ADMIN_USER_ID = "admin"
-ADMIN_USER_EMAIL = "admin@halos.local"
+# Admin email uses example.local (RFC 2606 reserved domain)
+# In production, the OIDC provider supplies the actual email
+ADMIN_USER_EMAIL = "admin@example.local"
 
 # Group IDs (must match template)
 ADMINS_GROUP_ID = "z4qbfvum6cs94sr6s5pslxq6"
@@ -117,8 +120,8 @@ def insert_admin_user(conn: sqlite3.Connection) -> None:
     so when an OIDC user logs in, it only finds users with provider='oidc'.
 
     We create the user with provider='oidc' so that when admin logs in via OIDC
-    with the same email (admin@halos.local), Homarr finds this existing user
-    and links the OIDC account to it instead of creating a new user.
+    with a matching email, Homarr finds this existing user and links the OIDC
+    account to it instead of creating a new user.
 
     Note: email_verified must be set to 1 (true) for account linking to work.
     """
