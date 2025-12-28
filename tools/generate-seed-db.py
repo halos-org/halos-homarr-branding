@@ -197,6 +197,13 @@ def insert_server_settings(conn: sqlite3.Connection) -> None:
         }
     }
 
+    # Appearance settings - dark mode for anonymous users
+    appearance = {
+        "json": {
+            "defaultColorScheme": "dark"
+        }
+    }
+
     cursor.execute("""
         INSERT INTO serverSetting (setting_key, value) VALUES (?, ?)
     """, ('analytics', json.dumps(analytics)))
@@ -204,6 +211,10 @@ def insert_server_settings(conn: sqlite3.Connection) -> None:
     cursor.execute("""
         INSERT INTO serverSetting (setting_key, value) VALUES (?, ?)
     """, ('crawlingAndIndexing', json.dumps(crawling)))
+
+    cursor.execute("""
+        INSERT INTO serverSetting (setting_key, value) VALUES (?, ?)
+    """, ('appearance', json.dumps(appearance)))
 
     conn.commit()
 
