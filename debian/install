@@ -1,2 +1,4 @@
 etc/halos-homarr-branding/branding.toml etc/halos-homarr-branding/
+usr/share/applications/homarr.desktop usr/share/applications/
 usr/share/halos-homarr-branding/* usr/share/halos-homarr-branding/
+usr/share/pixmaps/homarr.svg usr/share/pixmaps/
