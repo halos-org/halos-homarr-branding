@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Homarr
+Comment=HaLOS Dashboard
+Icon=/usr/share/pixmaps/homarr.svg
+Exec=xdg-open http://homarr.localhost/
+Terminal=false
+Categories=System;Settings;
