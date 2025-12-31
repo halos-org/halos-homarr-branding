@@ -74,7 +74,7 @@ custom_css = """
 # Default admin credentials for first-boot setup
 # IMPORTANT: Users should change password after first login
 admin_username = "admin"
-admin_password = "HalosAdmin123@"
+admin_password = "halos"
 
 [board]
 # Default board configuration
