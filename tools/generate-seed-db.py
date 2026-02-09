@@ -204,6 +204,13 @@ def insert_server_settings(conn: sqlite3.Connection) -> None:
         }
     }
 
+    # User settings - disable gravatar/libravatar to avoid external requests
+    user = {
+        "json": {
+            "enableGravatar": False
+        }
+    }
+
     cursor.execute("""
         INSERT INTO serverSetting (setting_key, value) VALUES (?, ?)
     """, ('analytics', json.dumps(analytics)))
@@ -215,6 +222,10 @@ def insert_server_settings(conn: sqlite3.Connection) -> None:
     cursor.execute("""
         INSERT INTO serverSetting (setting_key, value) VALUES (?, ?)
     """, ('appearance', json.dumps(appearance)))
+
+    cursor.execute("""
+        INSERT INTO serverSetting (setting_key, value) VALUES (?, ?)
+    """, ('user', json.dumps(user)))
 
     conn.commit()
 
