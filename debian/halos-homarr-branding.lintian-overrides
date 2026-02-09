@@ -1,3 +1,6 @@
 # xdg-open is a standard system utility from xdg-utils package, not
 # something we should ship ourselves. The package depends on xdg-utils.
 halos-homarr-branding: desktop-command-not-in-package xdg-open [usr/share/applications/homarr.desktop]
+
+# Private package, not intended for Debian; no ITP bug to close.
+halos-homarr-branding: initial-upload-closes-no-bugs
