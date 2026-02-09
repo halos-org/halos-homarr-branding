@@ -99,6 +99,3 @@ no_index = true
 no_follow = true
 no_translate = true
 no_sitelinks_search_box = true
-
-[settings.user]
-enable_gravatar = false
