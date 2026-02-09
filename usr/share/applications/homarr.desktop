@@ -4,6 +4,6 @@ Type=Application
 Name=Homarr
 Comment=HaLOS Dashboard
 Icon=/usr/share/pixmaps/homarr.svg
-Exec=xdg-open http://homarr.localhost/
+Exec=xdg-open http://localhost/
 Terminal=false
 Categories=System;Settings;
