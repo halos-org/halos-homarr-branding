@@ -71,7 +71,7 @@ The main configuration file is installed at:
 ## Related Packages
 
 - [halos-homarr-container](../halos-core-containers/apps/homarr/) - Homarr dashboard container
-- [homarr-container-adapter](https://github.com/hatlabs/homarr-container-adapter) - First-boot setup and auto-discovery
+- [homarr-container-adapter](https://github.com/halos-org/homarr-container-adapter) - First-boot setup and auto-discovery
 
 ## License
 
