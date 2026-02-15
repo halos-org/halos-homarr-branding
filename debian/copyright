@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: halos-homarr-branding
 Upstream-Contact: Matti Airas <matti.airas@hatlabs.fi>
-Source: https://github.com/halos-org/halos-distro
+Source: https://github.com/halos-org/halos
 
 Files: *
 Copyright: 2025 Hat Labs Ltd

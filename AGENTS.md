@@ -6,18 +6,18 @@
 
 ## For Agentic Coding: Use the HaLOS Workspace
 
-**IMPORTANT**: When using Claude Code or other AI assistants, work from the halos-distro workspace repository for full context across all HaLOS repositories.
+**IMPORTANT**: When using Claude Code or other AI assistants, work from the halos workspace repository for full context across all HaLOS repositories.
 
 ```bash
 # Work from workspace
-cd halos-distro/
+cd halos/
 # This repo is available as: halos-homarr-branding/
 ```
 
-**Development Workflows**: See `halos-distro/docs/` folder:
-- `halos-distro/docs/DEVELOPMENT_WORKFLOW.md` - Detailed Claude Code workflows
-- `halos-distro/docs/PROJECT_PLANNING_GUIDE.md` - Project planning process
-- `halos-distro/docs/IMPLEMENTATION_CHECKLIST.md` - Implementation checklist
+**Development Workflows**: See `halos/docs/` folder:
+- `halos/docs/DEVELOPMENT_WORKFLOW.md` - Detailed Claude Code workflows
+- `halos/docs/PROJECT_PLANNING_GUIDE.md` - Project planning process
+- `halos/docs/IMPLEMENTATION_CHECKLIST.md` - Implementation checklist
 
 ## About This Project
 
