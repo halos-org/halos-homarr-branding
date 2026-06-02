@@ -78,13 +78,29 @@ admin_password = "halos"
 
 [board]
 # Default board configuration
-name = "Halos"
-display_name = "Halos"
-column_count = 12
-is_public = true
-
 # NOTE: Cockpit is now configured via /etc/halos/webapps.d/cockpit.toml
 # The [board.cockpit] section has been removed in favor of the unified registry.
+name = "Halos"
+display_name = "Halos"
+is_public = true
+
+# Responsive layouts: each applies from its breakpoint (px of viewport width)
+# upward, until the next-larger breakpoint takes over. The base entry must stay
+# at breakpoint 0 so very narrow viewports always have a layout to fall back to.
+[[board.layouts]]
+name = "Mobile"
+breakpoint = 0
+column_count = 4
+
+[[board.layouts]]
+name = "Tablet"
+breakpoint = 768
+column_count = 6
+
+[[board.layouts]]
+name = "Desktop"
+breakpoint = 1200
+column_count = 12
 
 [settings]
 # Server settings for first-boot initialization

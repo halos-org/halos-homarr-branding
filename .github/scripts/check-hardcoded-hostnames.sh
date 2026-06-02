@@ -23,8 +23,11 @@ fi
 # Get list of tracked files, excluding:
 # - Markdown files (documentation is allowed)
 # - This script itself
+# - debian/changelog: an append-only historical record; past entries cannot be
+#   rewritten via bumpversion, so a hostname mentioned in a changelog body is a
+#   record of history, not a live source reference.
 SCRIPT_NAME=".github/scripts/check-hardcoded-hostnames.sh"
-files=$(git ls-files --cached | grep -v '\.md$' | grep -v "$SCRIPT_NAME" || true)
+files=$(git ls-files --cached | grep -v '\.md$' | grep -v "$SCRIPT_NAME" | grep -v '^debian/changelog$' || true)
 
 if [[ -z "$files" ]]; then
     echo "No files to check."
