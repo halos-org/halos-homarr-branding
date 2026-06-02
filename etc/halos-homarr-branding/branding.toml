@@ -78,6 +78,8 @@ admin_password = "halos"
 
 [board]
 # Default board configuration
+# NOTE: Cockpit is now configured via /etc/halos/webapps.d/cockpit.toml
+# The [board.cockpit] section has been removed in favor of the unified registry.
 name = "Halos"
 display_name = "Halos"
 is_public = true
@@ -99,9 +101,6 @@ column_count = 6
 name = "Desktop"
 breakpoint = 1200
 column_count = 12
-
-# NOTE: Cockpit is now configured via /etc/halos/webapps.d/cockpit.toml
-# The [board.cockpit] section has been removed in favor of the unified registry.
 
 [settings]
 # Server settings for first-boot initialization
